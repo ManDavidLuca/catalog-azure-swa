@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Laborator 6 - Profil Personal</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body id="card" class="w3-light-grey">
+
+    <div class="w3-container w3-teal">
+        <a href="index.html" class="w3-button w3-teal w3-hover-dark-grey">← Catalog</a>
+    </div>
+    
+    <div class="w3-container w3-white w3-card-4 w3-margin w3-padding">
+        <h1 class="w3-text-teal">Profil Personal</h1>
+        <button onclick="altaViata()">Altă viață</button>
+        <p id="nume">
+            <strong>Nume si prenume:</strong> Man David-Luca<br>
+            <strong>E-mail:</strong> Man.Fl.David@student.utcluj.ro
+        </p>
+<p>
+<p id="anWeb" onmouseover="arataVechimea()" onmouseout="arataAnul()">
+  Nascut in 2007.
+</p>
+        <img id="poza" src ="imagini/fotografie.jpeg" alt="Fotografia mea" class="w3-round w3-image" style="max-width:200px;">
+    </div>
+
+    <div class="w3-container w3-white w3-card-4 w3-margin w3-padding">
+        <p><strong>Asteptari legate de educatie</strong></p>
+        <p id="pasiuni">
+            Imi doresc imbunatatirea si dezvoltarea cunostintelor in domeniul electronicii si a tehnologiei informatiei.<br> 
+            In opinia mea, studiile universitare trebuie sa ne ofere o baza eficienta si solida de informatii care sa ne ajute in domeniul respectiv si nu numai.
+        </p>
+    </div>
+
+    <div class="w3-container w3-white w3-card-4 w3-margin w3-padding">
+        <table class="w3-table w3-striped w3-bordered w3-hoverable">
+            <tr class="w3-teal">
+                <th>Disciplina</th>
+                <th>Anul</th>
+                <th>Fisa disciplinei</th>
+            </tr>
+            <tr>
+                <td>Fizica I</td>
+                <td>I</td>
+                <td><a href="https://etti.utcluj.ro/files/Acasa/Site/FiseDisciplina/T1_An_I_II/03a.pdf" target="_blank">Fizica</a></td>
+            </tr>
+            <tr>
+                <td>Componente si circuite pasive</td>
+                <td>I</td>
+                <td><a href="https://etti.utcluj.ro/files/Acasa/Site/FiseDisciplina/T1_An_I_II/05a.pdf" target="_blank">CCP</a></td>
+            </tr>
+            <tr>
+                <td>Dispozitive electronice</td>
+                <td>I</td>
+                <td><a href="https://etti.utcluj.ro/files/Acasa/Site/FiseDisciplina/T1_An_I_II/12a.pdf" target="_blank">Dispozitive electronice</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="w3-container w3-white w3-card-4 w3-margin w3-padding">
+        <p>
+            <strong>Hobby-uri si alte activitati reprezentative:</strong><br>
+            1. Sport<br>
+            2. Gaming<br>
+            3. Offroad<br>
+            4. Iesirile in natura<br>
+            5. Mecanica
+        </p>
+    </div>
+
+</body>
+</html>
+<script>
+function altaViata(){
+document.getElementById('nume').textContent = 'Politist sef pe Botosani';
+document.getElementById('pasiuni').innerHTML = '<li>stagiu de vara la academia de politie Bucuresti</li><li>Facultatea de drept</li>';
+document.getElementById('poza').src = 'imagini/shared image.jpg';
+document.getElementById('card').style.backgroundColor = '#1d2b3a';
+
+}
+
+
+
+
+
+  function arataVechimea() {
+    const anCurent = new Date().getFullYear();
+    const vechime = anCurent - 2007;
+    document.getElementById('anWeb').textContent =
+      'Varsta este de ' + vechime + ' de ani.';
+  }
+  function arataAnul() {
+    document.getElementById('anWeb').textContent =
+      'Nascut in 2007.';
+  }
+</script>
